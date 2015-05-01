@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div class="header" th:fragment="nav">
+
+        <ul class="nav nav-pills pull-right">
+
+            <li th:class="${#strings.append(#httpServletRequest.contextPath, '/') == #httpServletRequest.getRequestURI() } ? 'active'">
+                <a th:href="@{/}">Home</a></li>
+
+            <!-- Change upper right context menu depending on if the user is logged in or not:-->
+            <!--/*/ <th:block th:if="${account}"> /*/-->
+            <li th:class="${#strings.append(#httpServletRequest.contextPath, '/dashboard') == #httpServletRequest.getRequestURI() } ? 'active'">
+                <a th:href="@{/dashboard}">Dashboard</a></li>
+            <li><a th:href="@{/logout}">Logout</a></li>
+            <!--/*/ </th:block> /*/-->
+            <!--/*/ <th:block th:unless="${account}"> /*/-->
+            <li th:class="${#strings.append(#httpServletRequest.contextPath, '/login') == #httpServletRequest.getRequestURI() } ? 'active'">
+                <a th:href="@{/login}">Login</a></li>
+            <!--/*/ </th:block> /*/-->
+
+        </ul>
+
+        <h3 class="text-muted">Stormpath Spring Boot Webapp Tutorial</h3>
+    </div>
+ </body>
+</html>

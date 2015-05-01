@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Stormpath Spring Boot Tutorial</title>
+    <!--/*/ <th:block th:include="fragments/head :: head"/> /*/-->
+</head>
+<body>
+    <div class="container">
+        <div th:replace="fragments/nav :: nav">Nav</div>
+
+        <div class="jumbotron" id="welcome">
+
+            <h1>Welcome to the Stormpath Spring Boot Tutorial!</h1>
+
+            <p class="lead">
+                <br/>
+                <br/>
+                Welcome to this <i>gloriously simple</i>
+                <a href="https://docs.stormpath.com/java/spring-boot-web/">Spring Boot + Stormpath</a> sample web app!
+            </p>
+
+            <ul>
+                <li>First, take a look through this very basic site.</li>
+                <li>Then, check out this project's source code
+                    <a href="https://github.com/stormpath/stormpath-spring-boot-tutorial">on GitHub</a>.
+                </li>
+                <li>Lastly, integrate Stormpath into your own sites!</li>
+            </ul>
+
+            <br/>
+            <br/>
+
+            <h2>What This Sample App Demonstrates</h2>
+
+            <br/>
+            <br/>
+
+            <p>This simple application demonstrates how easy it is to register, login, and securely authenticate
+                users on your website using the Stormpath Spring Boot Web Starter.</p>
+
+            <p>Not a Stormpath user yet? <a href="https://api.stormpath.com/register">Signup for free!</a></p>
+
+            <br/>
+            <br/>
+
+            <p class="bigbutton"><a class="bigbutton btn btn-lg btn-danger" th:href="@{/register}" role="button">Register</a>
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>

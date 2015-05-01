@@ -1,0 +1,25 @@
+buildscript {
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE'
+    }
+}
+
+apply plugin: 'spring-boot'
+
+//sourceCompatibility = 1.6
+version = '0.1-SNAPSHOT'
+//war.baseName = 'stormpath-spring-boot-tutorial'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.stormpath.spring:spring-boot-starter-stormpath-thymeleaf:1.0.RC4.2'
+    //runtime group: 'ch.qos.logback', name: 'logback-classic', version: '1.0.13'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.2.1'
+}
