@@ -6,47 +6,52 @@
 </head>
 <body>
     <div class="container">
+
         <div th:replace="fragments/nav :: nav">Nav</div>
 
-        <div class="jumbotron" id="welcome">
+        <div class="row">
+            <div class="col-lg-12">
 
-            <h1>Welcome to the Stormpath Spring Boot Tutorial!</h1>
+                <div class="jumbotron" id="welcome">
 
-            <p class="lead">
-                <br/>
-                <br/>
-                Welcome to this <i>gloriously simple</i>
-                <a href="https://docs.stormpath.com/java/spring-boot-web/">Spring Boot + Stormpath</a> sample web app!
-            </p>
+                    <h1>Welcome to the Stormpath Spring Boot Tutorial!</h1>
 
-            <ul>
-                <li>First, take a look through this very basic site.</li>
-                <li>Then, check out this project's source code
-                    <a href="https://github.com/stormpath/stormpath-spring-boot-tutorial">on GitHub</a>.
-                </li>
-                <li>Lastly, integrate Stormpath into your own sites!</li>
-            </ul>
+                    <p class="lead">
+                        <br/>
+                        <br/>
+                        Welcome to this <i>gloriously simple</i>
+                        <a href="https://docs.stormpath.com/java/spring-boot-web/">Spring Boot + Stormpath</a> sample web app!
+                    </p>
 
-            <br/>
-            <br/>
+                    <ul>
+                        <li>First, take a look through this very basic site.</li>
+                        <li>Then, check out this project's source code
+                            <a href="https://github.com/stormpath/stormpath-spring-boot-tutorial">on GitHub</a>.
+                        </li>
+                        <li>Lastly, integrate Stormpath into your own sites!</li>
+                    </ul>
 
-            <h2>What This Sample App Demonstrates</h2>
+                    <br/>
+                    <br/>
 
-            <br/>
-            <br/>
+                    <h2>What This Sample App Demonstrates</h2>
 
-            <p>This simple application demonstrates how easy it is to register, login, and securely authenticate
-                users on your website using the Stormpath Spring Boot Web Starter.</p>
+                    <br/>
+                    <br/>
 
-            <p>Not a Stormpath user yet? <a href="https://api.stormpath.com/register">Signup for free!</a></p>
+                    <p>This simple application demonstrates how easy it is to register, login, and securely authenticate
+                        users on your website using the Stormpath Spring Boot Web Starter.</p>
 
-            <br/>
-            <br/>
+                    <p>Not a Stormpath user yet? <a href="https://api.stormpath.com/register">Signup for free!</a></p>
 
-            <p class="bigbutton"><a class="bigbutton btn btn-lg btn-danger" th:href="@{/register}" role="button">Register</a>
-            </p>
+                    <br/>
+                    <br/>
+
+                    <p class="bigbutton"><a class="bigbutton btn btn-lg btn-danger" th:href="@{/register}" role="button">Register</a>
+                    </p>
+                </div>
+            </div>
         </div>
-
     </div>
 </body>
 </html>

@@ -3,6 +3,7 @@ package tutorial;
 import com.stormpath.sdk.account.Account;
 import com.stormpath.sdk.directory.CustomData;
 import com.stormpath.sdk.lang.Strings;
+import com.stormpath.sdk.servlet.account.AccountResolver;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,7 +26,7 @@ public class DashboardController {
         String color = req.getParameter("color");
 
         //get the currently-logged-in account:
-        Account account = (Account)req.getAttribute("account");
+        Account account = AccountResolver.INSTANCE.getAccount(req);
 
         if (account != null) {
 
